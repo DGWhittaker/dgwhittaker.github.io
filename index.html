@@ -117,9 +117,25 @@
 						</ul>
 					</section>
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+					<ul>
+					  <li>Menu 1</li>
+					  <li>Menu 2</li>
+					  <li>Menu 3</li>
+					  <span id="dots">...</span>
+					  <span id="more">
+						<li>Menu 4</li>
+						<li>Menu 5</li>
+						<li>Menu 6</li>
+						<li>Menu 7</li>
+						<li>Menu 8</li>
+					  </span>
+					</ul>
 
-					<button onclick="myFunction()" id="myBtn">Read more</button>
+					<button onclick="myFunction()" id="myBtn">Read More</button>
+
+						<ul class="actions">
+							<li><a href="about.html" class="button">Learn More</a></li>
+						</ul>
 
 				<!-- Three -->
 					<section id="three">
@@ -509,11 +525,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					if (dots.style.display === "none") {
 						dots.style.display = "inline";
-						btnText.innerHTML = "Read more";
+						btnText.innerHTML = "Show More";
 						moreText.style.display = "none";
 					} else {
 						dots.style.display = "none";
-						btnText.innerHTML = "Read less";
+						btnText.innerHTML = "Show Less";
 						moreText.style.display = "inline";
 					}
 				}
