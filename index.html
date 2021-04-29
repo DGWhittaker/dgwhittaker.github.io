@@ -116,22 +116,28 @@
 						</ul>
 					</section>
 
-					<ul>
-					  <li>1</li>
-					  <li>2</li>
-					  <li>3</li>
-					  <li>4</li>
-					  <li>5</li>
+					<ul id='ul'>
+					    <li>2</li>
+					    <li>3</li>
+					    <li id='more'>more</li>
+					    <li id='4' style='display:none'>4</li><br/>
+					    <li id='5' style='display:none'>5</li><br/>
+					    <li id='less' style='display:none'>less</li> 
 					</ul>
-					<script>
-					var index = 2;
-					$('ul li:gt('+index+')').hide();
-					$('ul').append('<li class="more">more...</li>');
-					$('ul li.more').click(function() {
-					  $('ul li.more').remove();
-					  $('ul li:gt('+index+')').show();
+
+					$('#more').click(function(){
+					    $('#more').css('display','none');
+					    $('#4').css('display','inline');
+					    $('#5').css('display','inline');    
+					    $('#less').css('display','inline');    
 					});
-					</script>
+					                 
+					$('#less').click(function(){
+					    $('#less').css('display','none');
+					    $('#4').css('display','none');
+					    $('#5').css('display','none');    
+					    $('#more').css('display','inline');    
+					});
 
 				<!-- Three -->
 					<section id="three">
