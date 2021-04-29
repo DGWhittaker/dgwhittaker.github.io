@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/academicons.min.css"/>
+		<style> #more {display: none;}</style>
 	</head>
 	<body class="is-preload">
 
@@ -116,28 +117,9 @@
 						</ul>
 					</section>
 
-					<ul id='ul'>
-					    <li>2</li>
-					    <li>3</li>
-					    <li id='more'>more</li>
-					    <li id='4' style='display:none'>4</li><br/>
-					    <li id='5' style='display:none'>5</li><br/>
-					    <li id='less' style='display:none'>less</li> 
-					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
 
-					$('#more').click(function(){
-					    $('#more').css('display','none');
-					    $('#4').css('display','inline');
-					    $('#5').css('display','inline');    
-					    $('#less').css('display','inline');    
-					});
-					                 
-					$('#less').click(function(){
-					    $('#less').css('display','none');
-					    $('#4').css('display','none');
-					    $('#5').css('display','none');    
-					    $('#more').css('display','inline');    
-					});
+					<button onclick="myFunction()" id="myBtn">Read more</button>
 
 				<!-- Three -->
 					<section id="three">
@@ -519,6 +501,23 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function myFunction() {
+					var dots = document.getElementById("dots");
+					var moreText = document.getElementById("more");
+					var btnText = document.getElementById("myBtn");
+
+					if (dots.style.display === "none") {
+						dots.style.display = "inline";
+						btnText.innerHTML = "Read more";
+						moreText.style.display = "none";
+					} else {
+						dots.style.display = "none";
+						btnText.innerHTML = "Read less";
+						moreText.style.display = "inline";
+					}
+				}
+			</script>
 
 	</body>
 </html>
