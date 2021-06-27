@@ -11,6 +11,56 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/academicons.min.css"/>
+		<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.mobile-container {
+		  max-width: 480px;
+		  margin: auto;
+		  background-color: #555;
+		  height: 500px;
+		  color: white;
+		  border-radius: 10px;
+		}
+
+		.topnav {
+		  overflow: hidden;
+		  background-color: #333;
+		  position: relative;
+		}
+
+		.topnav #myLinks {
+		  display: none;
+		}
+
+		.topnav a {
+		  color: white;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		  display: block;
+		}
+
+		.topnav a.icon {
+		  background: black;
+		  display: block;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		}
+
+		.topnav a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		.active {
+		  background-color: #04AA6D;
+		  color: white;
+		}
+		</style>
 		<style> #more {display: none;}</style>
 		<style>
 			.btn-info {
@@ -58,12 +108,28 @@
 					Senior Research Fellow in<br />
 					Systems Biology Modelling</h1>
 
-					<ul class="actions">
+					<!-- Simulate a smartphone / tablet -->
+					<div class="mobile-container">
+
+					<!-- Top Navigation Menu -->
+					<div class="topnav">
+					  <a href="#" class="active">Logo</a>
+					  <div id="myLinks">
+					    <a href="#one">About</a>
+					    <a href="#two">Research</a>
+					    <a href="#three">News</a>
+					  </div>
+					  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					    <i class="fa fa-bars"></i>
+					  </a>
+					</div>
+
+<!-- 					<ul class="actions">
 						<li><a href="#one" class="button" id="Upgrade">About</a></li>
 						<li><a href="#two" class="button" id="Upgrade">Research</a></li>
 						<li><a href="#three" class="button" id="Upgrade">News</a></li>
 						<li><a href="#four" class="button" id="Upgrade">Contact</a></li>
-					</ul>
+					</ul> -->
 					<!-- crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1> -->
 				</div>
 			</header>
